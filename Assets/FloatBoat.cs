@@ -10,8 +10,9 @@ using System.Collections.Generic;
 // 54.153.114.110:
 public class FloatBoat : MonoBehaviour {
 	Rigidbody mRigidBody;
-	public float waterLevel = -0.50f; // -0.16f;
-	public float floatHeight = 2.0f;
+	public GameObject water;
+	private float waterLevel = -0.50f; // -0.16f;
+	public float floatHeight;// = 2.0f;
 	public float bounceDamp = 0.05f;﻿
 	public Vector3 buoyancyCentreOffset;
 	public float currentForce;
@@ -61,6 +62,7 @@ public class FloatBoat : MonoBehaviour {
 		});
 		*/
 		mRigidBody.freezeRotation = true;
+		waterLevel = water.transform.position.y;
 	}
 	public GameObject getGameObject(){
 		return this.gameObject;
