@@ -17,6 +17,7 @@ public class oarHinge : MonoBehaviour
 		maxAngle = 25;
 		oar.force = 20;
 		oar.targetVelocity = -1 * oarSpeed;
+		hinge.useMotor = true;
 		hinge.motor = oar;
 	}
 	
