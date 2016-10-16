@@ -13,8 +13,9 @@ public class oarHinge : MonoBehaviour
 	{
 		hinge = GetComponent<HingeJoint> ();
 		oar = hinge.motor;
-		oarSpeed = 20;
+		oarSpeed = 70;
 		maxAngle = 25;
+		oar.force = 20;
 		oar.targetVelocity = -1 * oarSpeed;
 		hinge.motor = oar;
 	}
